@@ -2,6 +2,7 @@
 # moviebot.py - Searching and pulling movies from IMDB (made by TichuMaster)
 
 import discord, requests, bs4, logging, asyncio, os, datetime
+from secret import *
 logging.basicConfig(level = logging.INFO, format = "%(asctime)s - %(levelname)s - %(message)s")
 
 
@@ -86,4 +87,4 @@ async def on_message(message):
         writeToFile(command)
     
 # Starting the client / bot
-client.run("MzU4MzQyNDE0Njg5MTA3OTY4.DJ3D6Q.rcFIyA8zP06RxuHANqkgVY-Iou0")
+client.run(secret_token)
